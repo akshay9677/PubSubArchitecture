@@ -3,8 +3,8 @@ const bodyParser = require("body-parser");
 const EventEmitter = require("events");
 const events = new EventEmitter();
 
-const obj = require("./subs");
-const obj2 = require("./subs2");
+const obj = require("./subscriber");
+const obj2 = require("./subscriber2");
 
 const app = express();
 

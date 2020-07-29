@@ -1,4 +1,4 @@
-const obj = require("./subs2");
+const obj = require("./subscriber2");
 const EventEmitter = require("events");
 const events = new EventEmitter();
 
