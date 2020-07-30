@@ -1,4 +1,4 @@
-const obj2 = {
+const subscriber2 = {
   subs2: function (events, eventName) {
     events.on(eventName, (t) => {
       console.log("Subscriber 2 :" + t);
@@ -7,4 +7,4 @@ const obj2 = {
   },
 };
 
-module.exports = obj2;
+module.exports = subscriber2;

@@ -1,7 +1,4 @@
-const EventEmitter = require("events");
-const events = new EventEmitter();
-
-const obj = {
+const subscriber1 = {
   subs: function (events, eventName) {
     events.on(eventName, (t) => {
       console.log("Subscriber 1 : " + t);
@@ -10,4 +7,4 @@ const obj = {
   },
 };
 
-module.exports = obj;
+module.exports = subscriber1;

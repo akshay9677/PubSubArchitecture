@@ -1,8 +1,8 @@
-const obj = require("./subscriber");
-const obj2 = require("./subscriber2");
+const subscriber1 = require("./subscriber");
+const subscriber2 = require("./subscriber2");
 
-const Subscriber = function (event, eventName) {
-  this.obj = obj.subs(event, eventName);
-  this.obj2 = obj2.subs2(event, eventName);
+const subscriber = function (event, eventName) {
+  this.subscriber1 = subscriber1.subs(event, eventName);
+  this.subscriber2 = subscriber2.subs2(event, eventName);
 };
-module.exports = Subscriber;
+module.exports = subscriber;

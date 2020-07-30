@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const EventEmitter = require("events");
 const events = new EventEmitter();
 
-const Subscriber = require("./subscriberFactory");
+const subscriber = require("./subscriberFactory");
 
 const app = express();
 
@@ -18,9 +18,9 @@ app.get("/", (req, res) => {
   res.render("index", { name: [] });
 });
 
-//Subscribers Functions
+//Subscriber
 
-const subscriber = new Subscriber(events, eventName);
+subscriber(events, eventName);
 
 app.post("/", (req, res) => {
   var valueToAdd = req.body.name;
