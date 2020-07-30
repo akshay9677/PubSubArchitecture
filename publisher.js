@@ -3,8 +3,7 @@ const bodyParser = require("body-parser");
 const EventEmitter = require("events");
 const events = new EventEmitter();
 
-const obj = require("./subscriber");
-const obj2 = require("./subscriber2");
+const Subscriber = require("./subscriberFactory");
 
 const app = express();
 
@@ -12,25 +11,24 @@ app.set("view engine", "ejs");
 app.use(bodyParser());
 app.use(express.static("files"));
 
+var listOfDatat = [];
+const eventName = "clicked";
+
 app.get("/", (req, res) => {
   res.render("index", { name: [] });
 });
-var t = [];
-const eventName = "clicked";
 
 //Subscribers Functions
-(function () {
-  obj.subs(events, eventName);
-  obj2.subs2(events, eventName);
-})();
+
+const subscriber = new Subscriber(events, eventName);
 
 app.post("/", (req, res) => {
-  var r = req.body.name;
-  t.push(r);
+  var valueToAdd = req.body.name;
+  listOfDatat.push(valueToAdd);
   //Publisher
-  events.emit("clicked", t);
+  events.emit("clicked", listOfDatat);
   module.exports = events;
-  res.render("index", { name: t });
+  res.render("index", { name: listOfDatat });
 });
 
 app.listen(3000, () => {
