@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 //Subscriber
 
-subscriber(events, eventName);
+const subscribers = new subscriber(events, eventName);
 
 app.post("/", (req, res) => {
   var valueToAdd = req.body.name;
