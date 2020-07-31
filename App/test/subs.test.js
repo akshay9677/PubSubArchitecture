@@ -1,10 +1,10 @@
-const obj = require("./subscriber2");
+const obj = require("../subscriber");
 const EventEmitter = require("events");
 const events = new EventEmitter();
 
-test("Test Cases for Subscriber 2", () => {
+test("Test cases for subscriber", () => {
   const eventName = "test";
-  obj.subs2(events, eventName);
+  obj.subs(events, eventName);
   events.emit(eventName, "value");
   expect(obj.arr).toBe("value");
 });
