@@ -11,7 +11,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser());
 app.use(express.static("files"));
 
-var listOfDatat = [];
+var map = new Map();
 const eventName = "clicked";
 
 app.get("/", (req, res) => {
@@ -24,11 +24,11 @@ const subscribers = new subscriber(events, eventName);
 
 app.post("/", (req, res) => {
   var valueToAdd = req.body.name;
-  listOfDatat.push(valueToAdd);
+  map.set(map.size + 1, valueToAdd);
   //Publisher
-  events.emit("clicked", listOfDatat);
+  events.emit("clicked", map);
   module.exports = events;
-  res.render("index", { name: listOfDatat });
+  res.render("index", { name: map });
 });
 
 app.listen(3000, () => {

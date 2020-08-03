@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-    <file path="C:\Users\AKASH\Desktop\Full Creative Internship\PubSub\App\test\subs2.test.js">
-        <testCase name="Test Cases for Subscriber 2" duration="6"/>
+    <file path="C:\Users\AKASH\Desktop\Full Creative Internship\PubSub\App\test\subscriber2.test.js">
+        <testCase name="Test Cases for Subscriber 2" duration="14"/>
     </file>
-    <file path="C:\Users\AKASH\Desktop\Full Creative Internship\PubSub\App\test\subs.test.js">
-        <testCase name="Test cases for subscriber" duration="8"/>
+    <file path="C:\Users\AKASH\Desktop\Full Creative Internship\PubSub\App\test\subscriber.test.js">
+        <testCase name="Test cases for Subscriber 1" duration="17"/>
     </file>
     <file path="C:\Users\AKASH\Desktop\Full Creative Internship\PubSub\App\test\subscriberFactory.test.js">
-        <testCase name="Subscriber factory test" duration="7">
-            <failure message="TypeError: Cannot read property &apos;arr&apos; of undefined"><![CDATA[TypeError: Cannot read property 'arr' of undefined
-    at Object.<anonymous> (C:\Users\AKASH\Desktop\Full Creative Internship\PubSub\App\test\subscriberFactory.test.js:8:25)
-    at Object.asyncJestTest (C:\Users\AKASH\Desktop\Full Creative Internship\PubSub\App\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:100:37)
-    at C:\Users\AKASH\Desktop\Full Creative Internship\PubSub\App\node_modules\jest-jasmine2\build\queueRunner.js:47:12
-    at new Promise (<anonymous>)
-    at mapper (C:\Users\AKASH\Desktop\Full Creative Internship\PubSub\App\node_modules\jest-jasmine2\build\queueRunner.js:30:19)
-    at C:\Users\AKASH\Desktop\Full Creative Internship\PubSub\App\node_modules\jest-jasmine2\build\queueRunner.js:77:41
-    at processTicksAndRejections (internal/process/task_queues.js:97:5)]]></failure>
-        </testCase>
+        <testCase name="Subscriber factory test" duration="17"/>
     </file>
 </testExecutions>

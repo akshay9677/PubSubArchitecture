@@ -5,6 +5,7 @@ const events = new EventEmitter();
 test("Test Cases for Subscriber 2", () => {
   const eventName = "test";
   obj.subs2(events, eventName);
-  events.emit(eventName, "value");
-  expect(obj.arr).toBe("value");
+  var map = new Map([[1, "value"]]);
+  events.emit(eventName, map);
+  expect(obj.arr[0]).toBe("value");
 });

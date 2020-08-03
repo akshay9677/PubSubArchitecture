@@ -2,5 +2,5 @@ projectKey=node-test-application
 serverUrl=http://localhost:9000
 serverVersion=8.4.1.35646
 dashboardUrl=http://localhost:9000/dashboard?id=node-test-application
-ceTaskId=AXOlTgWJorFZOw0jlAk7
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AXOlTgWJorFZOw0jlAk7
+ceTaskId=AXOzR3280BKZQgObLfCt
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXOzR3280BKZQgObLfCt
